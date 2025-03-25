@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h1 class="text-5xl text-blue-800 pb-2">{{ .Title }}</h1>
+
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format ":date_long" }}
+  <time datetime="{{ $dateMachine }}" class="text-blue-400">{{ $dateHuman }}</time>
+
+  <article class="py-4 prose prose-a:text-blue-600">{{ .Content }}</article>
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ end }}

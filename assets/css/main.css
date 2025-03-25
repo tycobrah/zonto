@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  p {
+    margin: 0 0 1.5rem;
+  }
+}

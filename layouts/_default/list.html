@@ -1,0 +1,8 @@
+{{ define "main" }}
+  <h1 class="text-5xl py-6 text-blue-900">{{ .Title }}</h1>
+  <div class="text-blue-700">{{ .Content }}</div>
+  {{ range .Pages }}
+    <h2 class="text-blue-700 py-6 text-3xl"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }}
+{{ end }}

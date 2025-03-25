@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://zonto.netlify.app/'
 languageCode = 'en-US'
 title = 'Zonto'
 
